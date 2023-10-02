@@ -1,0 +1,19 @@
+model_options_binary:
+  test_size: 0.2
+  random_state: 3
+  features:
+    - Air temperature [K]
+    - Process temperature [K]
+    - Rotational speed [rpm]
+    - Torque [Nm]
+    - Tool wear [min]
+
+model_options_multiclass:
+  test_size: 0.3
+  random_state: 3
+  features:
+    - Air temperature [K]
+    - Process temperature [K]
+    - Rotational speed [rpm]
+    - Torque [Nm]
+    - Tool wear [min]

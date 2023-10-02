@@ -2,10 +2,33 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
-predictive_maintenance:
+iot_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/predictive_maintenance.csv
 
-metrics:
+model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/model_input_table.pq
+
+binary_classifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/binary_classifier.pickle
+  # versioned: true
+
+multiclass_classifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/multiclass_classifier.pickle
+  # versioned: true
+
+metrics_binary:
   type: tracking.MetricsDataSet
-  filepath: data/09_tracking/metrics.json
+  filepath: data/09_tracking/metrics_binary.json
+
+metrics_multiclass:
+  type: tracking.MetricsDataSet
+  filepath: data/09_tracking/metrics_multiclass.json
+
+metrics_data:
+  type: tracking.JSONDataSet
+  filepath: data/09_tracking/metrics_data.json
+

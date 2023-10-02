@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predictive Maintenance</title>
+</head>
+<body>
+    <h1>Predictive Maintenance</h1>
+    <form action="/predict" method="post">
+        <label for="air_temp">Air Temperature [K]:</label>
+        <input type="text" id="air_temp" name="air_temp" required><br>
+        <label for="process_temp">Process Temperature [K]:</label>
+        <input type="text" id="process_temp" name="process_temp" required><br>
+        <label for="speed">Speed:</label>
+        <input type="text" id="speed" name="speed" required><br>
+        <label for="torque">Torque:</label>
+        <input type="text" id="torque" name="torque" required><br>
+        <label for="tool_wear">Tool Wear</label>
+        <input type="text" id="tool_wear" name="tool_wear" required><br>
+        <!-- Add input fields for other features -->
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
