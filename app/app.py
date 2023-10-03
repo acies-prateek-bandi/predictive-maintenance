@@ -6,7 +6,7 @@ from pickle import load
 app = Flask(__name__)
 
 # Load your trained predictive maintenance model
-model = load(open('./data/06_models/binary_classifier.pickle','rb'))
+model = load(open('binary_classifier.pickle','rb'))
 
 @app.route('/')
 def index():
